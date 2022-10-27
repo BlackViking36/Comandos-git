@@ -1,0 +1,54 @@
+COMANDOS BASICOS
+
+
+git version ----> para saber si tenemos instalado GIT y q version
+git config --global user.name "Nicolas Velazquez" ----> Le agrega el nombre al codigo
+git config --global user.email "nicovege@gmail.com" ----> Le agrega el email del propietario al codigo
+git config --list ---> Muestra como esta configurado GIT
+
+git init ---> Inicia GIT en la carpeta destino
+
+.gitignore ---> Es un archivo donde podemos almacenar el nombre o las wildcards (*.txt) de los archivos q queremos excluir del repositorio
+
+git add -A o git add . ---> Agrega los archivos al staging area
+git rm --cached [comando] ---> Remueve el archivo indicado del staging area
+git commit -m "..." ---> Agrega los archivos al repo
+git status ---> Muestra el estado de nuestro codigo
+git log ---> Muestra el historial de los commits
+
+GITHUB
+git pull origin master ---> Descarga el repo de GITHUB (IMPORTANTE: antes de comenzar a trabajar se sugiere hacer este comando)
+git diff ---> Muestra las diferencias del repositorio publico con el local
+git push origin master ---> Sube el repo a GITHUB
+
+git remote add origin [http://github] ---> Agrega el codigo al repo
+
+RAMAS (BRANCHES PUES)
+git branch checkout [nombre de la rama] ---> Crea una nueva rama y se mueve a la misma
+git branch ---> Muestra las ramas creadas
+git push -u origin [nombre de la branch] ---> Sube la branch a GITHUB dentro de nuestro repo
+git branch -a ---> Muestra todas las branches locales y remotas
+git checkout master ---> Se mueve a la rama MASTER
+git branch --merged ---> Muestra las ramas q se han MERGEADO
+git merge [nombre de la branch] ---> Agrega los cambios de la branch nueva a la branch MASTER luego (git push origin master)
+git push origin --delete [nombre de la branch] ---> Elimina la branch del repo
+git branch -d [nombre de la branch] ---> Elimina la branch localmente
+
+git restore [archivo] ---> Elimina los cambios realizados en un archivo luego de un commit
+git checkout [archivo] ---> Resetea el archivo a como estaba en el repo
+git commit --amend ---> Permite modificar el ultimo commit de dos formas: 1-agrega el archivo al repo o 2-modificando el msj
+git log --stat ---> Muestra los archivos modificados en cada commit
+
+MOVER COMMIT A OTRA BRANCH
+git log
+git checkout [nombre de la branch]
+git cherry-pick [commit id] ---> Copia el commit de la branch MASTER a la branch
+
+git reset --soft [commit id] ---> Elimina el commit indicado en el commit id pero dentro del staging area
+git reset [commit id] ---> Elimina el commit indicado en el commit id
+git reset --hard [commit id] ---> Elimina el commit indicado y deja el working directory de cero
+
+git reflog ---> Muestra el historial completo incluyendo los cambios antes y desp de un amend
+git diff [commit id1 commit id2] ---> Muestra las diferencias entre commit 1 y 2
+
+
