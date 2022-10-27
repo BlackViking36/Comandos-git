@@ -21,7 +21,7 @@ git pull origin master ---> Descarga el repo de GITHUB (IMPORTANTE: antes de com
 git diff ---> Muestra las diferencias del repositorio publico con el local
 git push origin master ---> Sube el repo a GITHUB
 
-git remote add origin [http://github] ---> Agrega el codigo al repo
+git remote add origin [ http://github ] ---> Agrega el codigo al repo
 
 RAMAS (BRANCHES PUES)
 git branch checkout [nombre de la rama] ---> Crea una nueva rama y se mueve a la misma
